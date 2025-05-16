@@ -28,7 +28,7 @@ export const App = () => {
 
   return (
     <div className={`container theme-${selectedCategory.replace(/\s/g, "")}`}>
-      <h3 id="d">✨ Find It. Love It. Buy It- from cart to heart 🛍️🛒❤️</h3>
+      <h6 id="d">✨ Find It. Love It. Buy It- from cart to heart 🛍️🛒❤️</h6>
 
     
       <input
