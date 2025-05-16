@@ -260,62 +260,68 @@ h2 {
     "wdth" 100;
 }
 /* Ensure container padding is comfortable on small devices */
-@media (max-width: 600px) {
-  .container {
+@media (max-width: 476px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Each column takes equal width */
+    gap: 1rem;
     padding: 1rem;
   }
 
-  /* Search bar: full width and more padding on small screens */
-  .search-bar {
-    max-width: 100%;
-    padding: 1rem 1.2rem;
-    font-size: 1.1rem;
-  }
-
-  /* Button group: stack buttons vertically on narrow screens */
-  .btn-group {
+  .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .btn-group button {
-    width: 90%;
-    margin: 0.5rem 0;
-  }
-
-  /* Cards: already one column, add spacing */
-  .card-grid {
-    gap: 1.5rem;
-    padding: 0.5rem;
-  }
-
-  /* Card padding and font sizes for better readability on mobiles */
-  .card {
+    justify-content: space-between;
+    height: 100%;
     padding: 1rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+
+  .card img {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+
   .card h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
+
   .price {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
   }
+
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    height: auto;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
   .card button {
     width: 100%;
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    margin-top: auto;
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
   }
 
-  /* Reduce shadow and transform on card hover to keep it subtle on touch devices */
+  .card button:hover {
+    background-color: #fb8c00;
+  }
+
   .card:hover {
     transform: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
-
-  /* Adjust description text for smaller screens */
-  .description {
-    font-size: 0.85rem;
-    height: auto;
-    -webkit-line-clamp: unset;
-    display: block;
-  }
 }
+
