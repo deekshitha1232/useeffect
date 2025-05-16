@@ -263,8 +263,8 @@ h2 {
 @media (max-width: 476px) {
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Each column takes equal width */
-    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+    gap: 1.5rem; /* Increased vertical gap between cards */
     padding: 1rem;
   }
 
@@ -274,6 +274,7 @@ h2 {
     justify-content: space-between;
     height: 100%;
     padding: 1rem;
+    margin: 0; /* Ensures grid spacing works properly */
     border-radius: 15px;
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -324,3 +325,5 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 }
+
+
